@@ -34,7 +34,7 @@ function App() {
   // Using fetch to get transactions from the backend
 
   useEffect(() => {
-    fetch("https://finance-tracker-service-bahq.onrender.com/transactions")
+    fetch("https://finance-tracker-service-6x0h.onrender.com/transactions")
       .then((res) => res.json())
       .then((data) => {
         setTransactions(data);
@@ -46,7 +46,7 @@ function App() {
 
   const addTransaction = async (tx) => {
     try {
-      const res = await fetch("https://finance-tracker-service-bahq.onrender.com/transactions", {
+      const res = await fetch("https://finance-tracker-service-6x0h.onrender.com/transactions", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(tx),
@@ -61,7 +61,7 @@ function App() {
 
   const deleteTransaction = async (_id) => {
     try {
-      await fetch(`https://finance-tracker-service-bahq.onrender.com/transactions/${_id}`, {
+      await fetch(`https://finance-tracker-service-6x0h.onrender.com/${_id}`, {
         method: "DELETE",
       });
 
@@ -73,7 +73,7 @@ function App() {
 
   const editTransaction = async (_id, tx) => {
     try {
-      await fetch(`https://finance-tracker-service-bahq.onrender.com/transactions/${_id}`, {
+      await fetch(`https://finance-tracker-service-6x0h.onrender.com/${_id}`, {
         method: "PUT",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(tx),

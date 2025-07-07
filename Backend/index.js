@@ -90,6 +90,6 @@ app.get("/", (req, res) => {
 });
 
 // Start the server
-app.listen("*", (req, res) => {
-  console.log(`🚀 Server running at http://localhost:5000`);
+app.listen(5000, (req, res) => {
+  console.log(`🚀 Server running at https://finance-tracker-service-6x0h.onrender.com/`);
 });
